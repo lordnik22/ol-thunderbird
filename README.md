@@ -16,8 +16,8 @@ Not available in Melpa.
 Alternatively you can clone this project and add it to the load-path
 in your init-file:
 ```
-(add-to-list 'load-path "~/.emacs.d/elisp/org-shoplist")
-(require 'org-shoplist)
+(add-to-list 'load-path "~/.emacs.d/elisp/ol-thunderbird")
+(require 'ol-thunderbird)
 ```
 
 ### Your first link to thunderbird in org-mode
@@ -38,4 +38,4 @@ candidate.
 
 Ah and did I mention, I use IDO...
 
-![alt text](guide.png "Display all Headers in Thunderbird")
+![alt text](guide.jpg "Display all Headers in Thunderbird")
