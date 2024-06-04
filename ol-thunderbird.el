@@ -21,7 +21,7 @@
 (org-link-set-parameters "thunderbird"
 			 :follow #'ol-thunderbird-open
 			 :export #'ol-thunderbird-export
-			 :store #'ol-thunderbird-store-link
+			 :store nil
 			 :complete #'ol-thunderbird-complete-thunderbird)
 
 (defcustom ol-thunderbird-command 'thunderbird
@@ -33,10 +33,6 @@
   "Visit the thunderbird deck named ‘NAME’.
 ‘MID’ should be the message-id of the email you want to visit."
   (shell-command (concat "thunderbird mid:" mid " && xdotool windowactivate")))
-
-(defun ol-thunderbird-store-link ()
-  "Not implemented because thunderbird is an external program"
-  (error "Can’t store thunderbird link because thunderbird is an external program"))
 
 (defun ol-thunderbird-export (link description format _)
   "Export a thunderbird deck link from Org files."
