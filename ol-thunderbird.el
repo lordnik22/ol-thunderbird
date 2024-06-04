@@ -47,9 +47,9 @@
   "Not supported because no API to get all emails from thunderbird."
   (concat (symbol-name ol-thunderbird-command) ":"
 	  (let ((mid (ido-completing-read "Insert message id: " kill-ring)))
-	    (if (string-match-p "<.*@.*\\..*>" mid)
+	    (if (string-match-p "<.*@.*>" mid)
 		(replace-regexp-in-string "<\\|>" "" mid)
-	      (user-error "Message Id not copyed from Thunderbird. Message-id needs to match regex: ‘<.*@.*\\..*>’")))))
+	      (user-error "Message Id not copyed from Thunderbird. Message-id needs to match regex: ‘<.*@.*>’")))))
 
 
 (provide 'ol-thunderbird)
