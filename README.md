@@ -1,12 +1,20 @@
 # ol-thunderbird
-This is a small extension to Emacs which adds Thunderbird Links to org-mode.
+This package adds a new org-link-type: thunderbird to [GNU Emacs](https://www.gnu.org/software/emacs/) org-mode.
+
+This allows to link related emails in org-headers. It's for everyone
+who hasn't setup [mu4e](https://github.com/emacsmirror/mu4e).
+
+It's not a integration of [Thunderbird](https://www.thunderbird.net/) into [org-mode](https://orgmode.org/).
 
 To open the correct email within Thunderbird the message-id is used.
+
+Beaware the copyed message-id is supplied to `shell-command`, which
+allows for arbitrary code execution if malicous ids are supplied.
 
 ## Getting started
 ### Installation
 
-Not available in Melpa.
+Currently, not available on [MELPA](https://melpa.org/).
 
 ```emacs-lisp
    (use-package ol-thunderbird

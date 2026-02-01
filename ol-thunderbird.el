@@ -14,7 +14,6 @@
 ;; GNU General Public License for more details.
 ;;; Commentary:
 ;;; Add a new org-link-type: thunderbird. When opened, will start thunderbird and open email with given id
-;;; Requires xdotool to focus on thunderbird.
 ;;; Code:
 (require 'ol)
 
@@ -32,7 +31,8 @@
 (defun ol-thunderbird-open (mid _)
   "Visit the thunderbird deck named ‘NAME’.
 ‘MID’ should be the message-id of the email you want to visit."
-  (shell-command (concat "thunderbird mid:" mid " && xdotool windowactivate")))
+  (let ((inhibit-message t))
+    (shell-command (concat "thunderbird mid:" (shell-quote-argument mid)))))
 
 (defun ol-thunderbird-export (link description format _)
   "Export a thunderbird deck link from Org files."
