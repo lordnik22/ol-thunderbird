@@ -17,8 +17,8 @@ allows for arbitrary code execution if malicous ids are supplied.
 Currently, not available on [MELPA](https://melpa.org/).
 
 ```emacs-lisp
-   (use-package ol-thunderbird
-	:straight (ol-thunderbird :type git :host github :repo "lordnik22/ol-thunderbird"))
+(use-package ol-thunderbird
+  :straight (ol-thunderbird :type git :host github :repo "lordnik22/ol-thunderbird"))
 ```
 
 Alternatively you can clone this project and add it to the load-path
